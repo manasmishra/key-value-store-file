@@ -1,0 +1,25 @@
+{
+    "name": "kvstore",
+    "version": "1.0.0",
+    "description": "Demo project for storing key value pairs in a json file so that multiple processes can access same source of truth",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/manasmishra/newsarticles.git"
+    },
+    "author": "Manas",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/manasmishra/newsarticles/issues"
+    },
+    "homepage": "https://github.com/manasmishra/newsarticles#readme",
+    "dependencies": {
+        "@hapi/joi": "^17.1.1",
+        "cookie-parser": "^1.4.4",
+        "express": "^4.17.1",
+        "express-validator": "^5.3.1"
+    }
+}
