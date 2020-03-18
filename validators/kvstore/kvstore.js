@@ -27,7 +27,7 @@ const validateKVStoreSet = (req, res, next) => {
         key: Joi.string().required()
     });
     const { error, value } = schema.validate(params);
-    if(!error && ((data && typeof data === 'string') || (data && data.value && typeof data === 'object'))) {
+    if(!error && data) {
         return next();
     }
     return res.status(422).json({

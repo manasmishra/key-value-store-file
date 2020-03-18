@@ -4,22 +4,24 @@
     "description": "Demo project for storing key value pairs in a json file so that multiple processes can access same source of truth",
     "main": "app.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "node bin/www",
+        "test:unit": "./node_modules/.bin/_mocha --timeout 10000  \"tests/unit/**/**/**.test.js\""
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/manasmishra/newsarticles.git"
+        "url": "git+https://github.com/manasmishra/key-value-store-file"
     },
     "author": "Manas",
-    "license": "ISC",
+    "license": "no License",
     "bugs": {
-        "url": "https://github.com/manasmishra/newsarticles/issues"
+        "url": "https://github.com/manasmishra/key-value-store-file/issues"
     },
-    "homepage": "https://github.com/manasmishra/newsarticles#readme",
+    "homepage": "https://github.com/manasmishra/key-value-store-file#readme",
     "dependencies": {
         "@hapi/joi": "^17.1.1",
         "cookie-parser": "^1.4.4",
         "express": "^4.17.1",
-        "express-validator": "^5.3.1"
+        "express-validator": "^5.3.1",
+        "sinon": "^9.0.1"
     }
 }

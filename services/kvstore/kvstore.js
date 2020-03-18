@@ -14,10 +14,8 @@ const getByKey = async (key) => {
             if (err) return reject(err);
             obj = JSON.parse(data);
             if(!!key) {
-                console.log('obj is:', obj, ' value is:', obj[key]);
                 value = obj[key];
             }
-            console.log('value is:', value)
             return resolve(value);
         });
     });
@@ -31,9 +29,11 @@ const setByKey = async (key, value) => {
             if(!!key) {
                 obj[key] = value;
             }
-            console.log('updated obj is:', obj);
-            fs.writeFile('kvstore.json', JSON.stringify(obj), (err) => {
-                if (err) console.log('Error writing file:', err);
+            fs.writeFile('kvstore.json', JSON.stringify(obj), (err, res) => {
+                if (err) {
+                    console.log('Error writing file:', err);
+                    return reject(err);
+                }
                 return resolve(value);
             });
         });
