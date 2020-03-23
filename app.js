@@ -1,7 +1,5 @@
 var express = require('express');
-
 var bodyParser = require('body-parser');
-
 var { KVStore } = require('./routes');
 
 var app = express();
